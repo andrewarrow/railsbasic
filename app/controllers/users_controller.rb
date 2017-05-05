@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     u.flavor = @flavor
     u.password = User.ranpas
     if u.save
+      ApplicationMailer.forgot(u, u.password).deliver
       flash[:notice] = 'Check your email for password.'
       redirect_to '/sessions/new'
       return
