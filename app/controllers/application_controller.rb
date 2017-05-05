@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
 
     return nil unless uid
 
-    @current_user ||= uid
+    @current_user ||= User.where(id: uid).first
   end
 end

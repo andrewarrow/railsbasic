@@ -5,6 +5,16 @@ class UsersController < ApplicationController
     set_flavor
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    current_user.update_attributes(fname: params[:fname], lname: params[:lname])
+    flash[:notice] = 'Changes saved.'
+    redirect_to '/users/me/edit'
+  end
+
   def create
     set_flavor
     u = User.new
