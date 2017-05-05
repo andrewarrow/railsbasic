@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  root 'welcome#user'
+  match '/user', to: 'welcome#user', via: 'get'
 
   resources :users
   resources :sessions

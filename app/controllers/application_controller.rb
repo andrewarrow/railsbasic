@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   def current_user
     uid = session[:user_id]
 
+    return nil unless uid
+
     @current_user ||= uid
   end
 end
