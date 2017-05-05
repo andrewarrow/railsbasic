@@ -2,6 +2,11 @@
 <p>
 Hello
 </p>
+<% @items.each_with_index do |item,i| %>
+<p>
+<a href="/companies/<%=item.slug%>"><%= item.name %></a>
+</p>
+<% end %>
 <p>
 <a href="/companies/new" class="button">New Company</a>
 </p>

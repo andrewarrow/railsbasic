@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
     c = Company.new
     c.name = params[:name]
     c.description = params[:description]
+    c.creator_id = current_user.id
     if c.save
       flash[:notice] = 'Created.'
       redirect_to '/'
