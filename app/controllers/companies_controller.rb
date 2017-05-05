@@ -1,5 +1,9 @@
 class CompaniesController < ApplicationController
 
+  def show
+    @item = Company.where(slug: params[:id]).first
+  end
+
   def index
   end
 
