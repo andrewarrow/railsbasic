@@ -3,7 +3,11 @@
 Hello
 </p>
 <% @items.each_with_index do |item,i| %>
+
 <p>
+<% if item.logo%>
+<img src="<%=item.logo.thumb.url%>"/>
+<% end %>
 <a href="/companies/<%=item.slug%>"><%= item.name %></a>
 </p>
 <% end %>
