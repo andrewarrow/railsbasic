@@ -16,7 +16,11 @@
       &nbsp;
       |
       &nbsp;
-    <%=link_to 'logout', session_path(id: 'me'), method: 'delete' %>
+      <a href="/users/me/edit">settings</a>
+      &nbsp;
+      |
+      &nbsp;
+      <%=link_to 'logout', session_path(id: 'me'), method: 'delete' %>
     <% end %>
 
     <hr/>
