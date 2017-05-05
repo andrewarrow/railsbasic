@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <h1><a href="/">andrewarrow's railsbasic</a></h1>
+    <h1>andrewarrow's railsbasic</h1>
+    <a href="/">home</a>
+    <% if current_user %>
+    <%=link_to 'logout', session_path(id: 'me'), method: 'delete' %>
+    <% end %>
 
 <hr/>
 
