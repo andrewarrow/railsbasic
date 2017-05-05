@@ -1,4 +1,4 @@
-# andrewarrow's railsbasic
+# railsbasic
 
 This is the start of every rails app for me:
 
