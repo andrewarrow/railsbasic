@@ -1,11 +1,15 @@
 html {
   font-size: 62.5%;
+  height: 100%;
+  width: 90%;
   font-family: serif; }
 
 body {
   font-size: 1.8rem;
   line-height: 1.618;
-  margin: auto;
+  margin: 0;
+  height: 100%;
+  width: 90%;
   color: #4a4a4a;
   background-color: #f9f9f9;
   padding: 13px; }
@@ -150,6 +154,7 @@ textarea, select, input[type] {
     border: 1px solid #2c8898;
     outline: 0; }
 
+p { font-family: Verdana, Geneva, sans-serif; }
 label, legend, fieldset {
   display: block;
   margin-bottom: .5rem;
