@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     u.fname = params[:fname]
     u.lname = params[:lname]
     u.email = params[:email]
+    u.flavor = @flavor
     u.password = User.ranpas
     if u.save
       flash[:notice] = 'Check your email for password.'
