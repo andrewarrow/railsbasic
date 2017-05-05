@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-  before_validate :slugit
+  before_validation :slugit
 
   def slugit
     return if slug
