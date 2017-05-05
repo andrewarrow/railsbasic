@@ -20,6 +20,9 @@ class UsersController < ApplicationController
     end
     flash[:notice] = 'Not able to create account.'
     redirect_to '/'
+  rescue
+    flash[:notice] = 'Not able to create account.'
+    redirect_to '/'
   end
 
   def set_flavor
