@@ -12,3 +12,7 @@ This is the start of every rails app for me:
 * When logged in can update your user settings
 * Admin section namespace for superuser to edit /rba/users
 
+Example at:
+
+https://higher.team
+
