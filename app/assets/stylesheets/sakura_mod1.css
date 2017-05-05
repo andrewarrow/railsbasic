@@ -110,6 +110,10 @@ td, th {
   font-family: Verdana, Geneva, sans-serif;
   border-bottom: 1px solid #f1f1f1; }
 
+input[type="text"] {
+  font-size: 24px;
+}
+
 /* Buttons, forms and input */
 input, textarea {
   border: 1px solid #4a4a4a; }
@@ -145,7 +149,6 @@ textarea, select, input[type] {
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #f1f1f1;
   border: 1px solid #f1f1f1;
   border-radius: 4px;
   box-shadow: none;
