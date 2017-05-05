@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   match 'user', to: 'welcome#user', via: 'get'
 
   resources :users
+  resources :companies
   resources :sessions
 
   namespace :rba do
