@@ -157,7 +157,7 @@ textarea, select, input[type] {
     border: 1px solid #2c8898;
     outline: 0; }
 
-p { font-family: Verdana, Geneva, sans-serif; }
+p,label { font-family: Verdana, Geneva, sans-serif; }
 label, legend, fieldset {
   display: block;
   margin-bottom: .5rem;
