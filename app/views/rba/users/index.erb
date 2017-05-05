@@ -1,1 +1,11 @@
-items
+<% @items.each do |item| %>
+  <div>
+    <%= item.id %>
+    <%= item.email %>
+    <div>
+      <%= item.fname %>
+      <%= item.lname %>
+    </div>
+  </div>
+  <br/>
+<% end %>
