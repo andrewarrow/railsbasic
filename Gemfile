@@ -8,6 +8,7 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
+gem 'mini_magick'
 gem 'carrierwave', '~> 1.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
