@@ -4,4 +4,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
+
+  namespace :rba do
+    resources :users
+  end
 end
