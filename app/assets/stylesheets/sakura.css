@@ -5,10 +5,12 @@
  */
 /* Body */
 html {
+  font-family: Verdana, Geneva, sans-serif;
   font-size: 62.5%;
   font-family: serif; }
 
 body {
+  font-family: Verdana, Geneva, sans-serif;
   font-size: 1.8rem;
   line-height: 1.618;
   max-width: 38em;

@@ -3,11 +3,23 @@
     <form method="post" action="/sessions">
      <input type="text" name="email" placeholder="email"/>
      <br/>
-     <input type="password" name="password" placeholder="password"/>
+     <% if @forgot == 0 %>
+       <input type="password" name="password" placeholder="password"/>
+     <% end %>
      <br/>
      <br/>
-     <input type="submit" value="Login" style="font-size: 24px;"/>
+     <% if @forgot == 1 %>
+       <input type="hidden" name="forgot" value="1"/>
+       <input type="submit" value="Reset Password" style="font-size: 24px;"/>
+     <% else %>
+       <input type="submit" value="Login" style="font-size: 24px;"/>
+     <% end %>
      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </form>
+
+    <br/>
+    <% if @forgot == 0 %>
+      <a style="font-size: 12px;" href="/sessions/new?forgot=1">forgot password</a>
+    <% end %>
   </div>
 </div>
