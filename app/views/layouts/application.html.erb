@@ -13,6 +13,9 @@
     <h1>andrewarrow's railsbasic</h1>
     <a href="/">home</a>
     <% if current_user %>
+      &nbsp;
+      |
+      &nbsp;
     <%=link_to 'logout', session_path(id: 'me'), method: 'delete' %>
     <% end %>
 
