@@ -4,3 +4,6 @@
 <p>
 <%= @item.description %>
 </p>
+<% if @item.logo%>
+<img src="<%=@item.logo.thumb.url%>"/>
+<% end %>
