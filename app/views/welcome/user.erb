@@ -1,16 +1,30 @@
 
-<p>
-Hello
-</p>
+<table style="width:46%;">
+  <colgroup>
+    <col width="13%">
+    <col width="31%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th align="left">logo</th>
+      <th align="left">company</th>
+    </tr>
+  </thead>
+  <tbody>
 <% @items.each_with_index do |item,i| %>
-
-<p>
-<% if item.logo%>
-<img src="<%=item.logo.thumb.url%>"/>
+	<tr>
+		<td align="left">
+			<% if item.logo%>
+				<img src="<%=item.logo.thumb.url%>"/>
+			<% end %>
+		</td>
+		<td align="left">
+			<a href="/companies/<%=item.slug%>"><%= item.name %></a>
+		</td>
+	</tr>
 <% end %>
-<a href="/companies/<%=item.slug%>"><%= item.name %></a>
-</p>
-<% end %>
+    </tbody>
+  </table>
 <p>
 <a href="/companies/new" class="button">New Company</a>
 </p>

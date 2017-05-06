@@ -21,10 +21,9 @@ class CompaniesController < ApplicationController
       redirect_to '/'
       return
     end
-    flash[:notice] = 'Not able to create.'
+    flash[:notice] = ''+c.errors.inspect
     redirect_to '/'
   rescue ActiveRecord::RecordNotUnique
-    raise e.inspect
     flash[:notice] = 'Not able to create.'
     redirect_to '/'
   end
