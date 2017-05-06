@@ -5,6 +5,7 @@ class CompaniesController < ApplicationController
   end
 
   def index
+    @items = Company.all.order('created_at desc').limit(100)
   end
 
   def new

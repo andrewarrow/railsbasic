@@ -1,0 +1,28 @@
+
+<table style="width:66%;">
+  <colgroup>
+    <col width="13%">
+    <col width="31%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th align="left">logo</th>
+      <th align="left">company</th>
+      <th align="left">creator</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @items.each_with_index do |item,i| %>
+	<tr>
+		<td align="left">
+			<% if item.logo%>
+				<img src="<%=item.logo.thumb.url%>"/>
+			<% end %>
+		</td>
+		<td align="left"> <a href="/companies/<%=item.slug%>"><%= item.name %></a> </td>
+    <td><%=item.creator.name %></td>
+	</tr>
+<% end %>
+    </tbody>
+  </table>
+
