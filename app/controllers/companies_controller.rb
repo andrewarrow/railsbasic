@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
     end
     flash[:notice] = 'Not able to create.'
     redirect_to '/'
-  rescue Object => e
+  rescue ActiveRecord::RecordNotUnique
     raise e.inspect
     flash[:notice] = 'Not able to create.'
     redirect_to '/'

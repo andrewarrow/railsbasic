@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     end
     flash[:notice] = 'Not able to create account.'
     redirect_to '/'
-  rescue
+  rescue ActiveRecord::RecordNotUnique
     flash[:notice] = 'Not able to create account.'
     redirect_to '/'
   end
