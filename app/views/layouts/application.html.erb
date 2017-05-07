@@ -11,21 +11,30 @@
 
   <body>
     <h1>railsbasic</h1>
+    <nav class="">
+      <ul class="menu">
+        <li> 
     <a href="/">home</a>
-      &nbsp;
-      |
-      &nbsp;
+        </li>
+        <li> 
+    <a href="/users">users</a>
+        </li>
+        <li> 
+    <a href="/companies">companies</a>
+        </li>
+        <li> 
       <a href="/blog">blog</a>
+        </li>
     <% if current_user %>
-      &nbsp;
-      |
-      &nbsp;
+        <li>
       <a href="/users/me/edit">settings</a>
-      &nbsp;
-      |
-      &nbsp;
+        </li>
+        <li>
       <%=link_to 'logout', session_path(id: 'me'), method: 'delete' %>
+        </li>
     <% end %>
+      </ul> 
+    </nav> 
 
     <hr/>
 

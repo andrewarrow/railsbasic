@@ -10,28 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505231454) do
+ActiveRecord::Schema.define(version: 20170506225256) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
-    t.string   "slug"
+    t.string   "slug",        limit: 100
     t.string   "website"
     t.string   "flavor"
     t.string   "description"
     t.integer  "creator_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "logo"
+    t.integer  "stage"
     t.index ["slug"], name: "index_companies_on_slug", unique: true
+  end
+
+  create_table "user_companies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "company_id"
+    t.string  "role"
+    t.index ["company_id"], name: "index_user_companies_on_company_id"
+    t.index ["user_id"], name: "index_user_companies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
-    t.string "email"
+    t.string "email",    limit: 100
     t.string "flavor"
     t.string "password"
+    t.string "slug",     limit: 100
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
 end
