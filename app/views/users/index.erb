@@ -1,0 +1,26 @@
+
+<table style="width:100%;">
+  <colgroup>
+    <col width="13%">
+    <col width="31%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left">name</th>
+      <th align="left">flavor</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @items.each_with_index do |item,i| %>
+	<tr>
+		<td align="left">
+      <%= i+1 %>.
+		</td>
+		<td align="left"> <a href="/users/<%=item.slug%>"><%= item.name %></a> </td>
+    <td> <%=item.flavor%></td>
+	</tr>
+<% end %>
+    </tbody>
+  </table>
+

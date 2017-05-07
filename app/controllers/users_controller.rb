@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+  def show
+    @item = User.where(slug: params[:id]).first
+  end
   def index
+    @items = User.all.order(:id).limit(100)
   end
   def new
     set_flavor
