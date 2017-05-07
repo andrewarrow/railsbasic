@@ -12,6 +12,9 @@ This is the start of every rails app for me:
 * When logged in can update your user settings
 * Admin section namespace for superuser to edit /rba/users
 
+* Company model with slug and logo
+* A company has one creator_id but many other people linked via UserCompany join
+
 Example at:
 
 https://higher.team
