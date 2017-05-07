@@ -1,5 +1,5 @@
 
-<table style="width:46%;">
+<table style="width:99%;">
   <colgroup>
     <col width="13%">
     <col width="31%">
@@ -8,6 +8,7 @@
     <tr>
       <th align="left">logo</th>
       <th align="left">company</th>
+      <th align="left"></th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,9 @@
 		</td>
 		<td align="left">
 			<a href="/companies/<%=item.slug%>"><%= item.name %></a>
+		</td>
+		<td align="left">
+			<a href="/companies/<%=item.slug%>/edit">edit</a>
 		</td>
 	</tr>
 <% end %>
