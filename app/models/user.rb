@@ -19,6 +19,7 @@ class User < ApplicationRecord
   
   def self.ran_img
    i=%w{blur.jpg car.jpg cliff.jpg home.jpg house.jpg party.jpg pizza.jpg red_car.jpg table.jpg trees.jpg}
+   'party.jpg'
    i[rand(i.size)-1]
   end
 end
