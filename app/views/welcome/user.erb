@@ -1,34 +1,26 @@
 <%= render partial: 'layouts/container_top', locals: {h2: 'Hello'} %>
 
-<table style="width:99%;">
-  <colgroup>
-    <col width="13%">
-    <col width="31%">
-  </colgroup>
-  <thead>
+<table class="table">
     <tr>
-      <th align="left">logo</th>
-      <th align="left">company</th>
-      <th align="left"></th>
+      <th>logo</th>
+      <th>company</th>
+      <th></th>
     </tr>
-  </thead>
-  <tbody>
 <% @items.each_with_index do |item,i| %>
 	<tr>
-		<td align="left">
+		<td>
 			<% if item.logo%>
 				<img src="<%=item.logo.thumb.url%>"/>
 			<% end %>
 		</td>
-		<td align="left">
+		<td>
 			<a href="/companies/<%=item.slug%>"><%= item.name %></a>
 		</td>
-		<td align="left">
+		<td>
 			<a href="/companies/<%=item.slug%>/edit">edit</a>
 		</td>
 	</tr>
 <% end %>
-    </tbody>
   </table>
 <p>
 <a href="/companies/new" class="button">New Company</a>
