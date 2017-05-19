@@ -1,5 +1,9 @@
 class BlogController < ApplicationController
 
+  def index
+    @title = 'The Blog'
+  end
+
   def show
     y = params[:year].to_s
     m = params[:month]

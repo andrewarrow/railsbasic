@@ -59,11 +59,7 @@ header { background-image: url('<%= asset_url(User.ran_img) %>'); }
       <hr/>
     <% end %>
 
-<%= render partial: 'layouts/container_top', locals: {h2: @title} %>
-<div class="normal">
     <%= yield %>
-</div>
-<%= render partial: 'layouts/container_bottom' %>
 
     <aside class="bg-dark">
       <div class="container text-center">

@@ -1,5 +1,3 @@
-<%= render partial: 'layouts/container_top', locals: {h2: 'The Blog'} %>
-<div class="blog">
 <% BlogController.data.each do |year, v| %>
   <%= year %>
   <% v.each do |month, vv| %>
@@ -12,4 +10,3 @@
   <% end %>
 <% end %>
 </div>
-<%= render partial: 'layouts/container_bottom' %>

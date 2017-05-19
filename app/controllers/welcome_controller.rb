@@ -4,6 +4,8 @@ class WelcomeController < ApplicationController
       redirect_to '/user'
       return
     end
+
+    render layout: 'welcome'
   end
 
   def user
