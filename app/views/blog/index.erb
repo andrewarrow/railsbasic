@@ -1,12 +1,19 @@
 <% BlogController.data.each do |year, v| %>
-  <%= year %>
+
+  <div style="text-align: center">
+  <h1><%= year %></h1>
+  <br/>
+  <br/>
   <% v.each do |month, vv| %>
     <% vv.each do |eek, vvv| %>
-      <p style="font-size: 1.3em;">
       <h2 class="section-heading"><a href="/blog/<%=year%>/<%=month%>/<%=eek%>"><%= vvv[:title] %></a></h2>
-      by <%= vvv[:author] %>
+      <p> 
+      by <%= vvv[:author] %> (<%= month %>)
       </p>
+  <br/>
+  <br/>
     <% end %>
   <% end %>
+  </div>
 <% end %>
 </div>
