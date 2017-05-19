@@ -1,3 +1,4 @@
+<%= render partial: 'layouts/container_top', locals: {h2: 'Login'} %>
 <div>
   <div>
     <form method="post" action="/sessions">
@@ -10,9 +11,9 @@
      <br/>
      <% if @forgot == 1 %>
        <input type="hidden" name="forgot" value="1"/>
-       <input type="submit" value="Reset Password" style="font-size: 24px;"/>
+       <input type="submit" value="Reset Password" class="btn btn-primary"/>
      <% else %>
-       <input type="submit" value="Login" style="font-size: 24px;"/>
+       <input type="submit" value="Login" class="btn btn-primary"/>
      <% end %>
      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </form>
@@ -23,3 +24,4 @@
     <% end %>
   </div>
 </div>
+<%= render partial: 'layouts/container_bottom' %>
