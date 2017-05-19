@@ -4208,6 +4208,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     overflow-y: visible;
   }
   .navbar-fixed-top .navbar-collapse,
+  .navbar-unfixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     padding-right: 0;
