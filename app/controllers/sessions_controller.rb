@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
     @forgot = params[:forgot].to_i
+    @title = 'Login'
   end
 
   def create

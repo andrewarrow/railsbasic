@@ -4,9 +4,11 @@ class UsersController < ApplicationController
   end
   def index
     @items = User.all.order(:id).limit(100)
+    @title = 'Users'
   end
   def new
     set_flavor
+    @title = 'Sign Up'
   end
 
   def edit

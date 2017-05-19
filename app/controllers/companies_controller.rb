@@ -9,6 +9,7 @@ class CompaniesController < ApplicationController
 
   def index
     @items = Company.all.order('created_at desc').limit(100)
+    @title = 'Companies'
   end
 
   def new
