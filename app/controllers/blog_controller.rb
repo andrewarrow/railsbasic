@@ -2,6 +2,8 @@ class BlogController < ApplicationController
 
   def index
     @title = 'The Blog'
+    @subtitle = 'list of blog articles'
+    @spot = 'read the first one'
   end
 
   def show

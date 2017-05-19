@@ -59,6 +59,30 @@ header { background-image: url('<%= asset_url(User.ran_img) %>'); }
       <hr/>
     <% end %>
 
+    <section id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h2 class="section-heading"><%= @title %></h2>
+                    <hr class="light">
+<p>
+<%=@subtitle%>
+</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h2 class="section-heading"><%=@spot%></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <%= render partial: 'layouts/container_top', locals: {h2: @title} %>
 <div class="normal">
     <%= yield %>
