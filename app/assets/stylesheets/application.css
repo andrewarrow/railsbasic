@@ -12,5 +12,5 @@
  *
  *= require_self
  *= require bootstrap.css
- *= require creative.css
+ *= require creative.css.erb
  */
