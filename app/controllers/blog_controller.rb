@@ -2,7 +2,6 @@ class BlogController < ApplicationController
 
   def index
     @title = 'The Blog'
-    @subtitle = 'list of blog articles'
     @spot = 'read the first one'
   end
 
@@ -19,6 +18,8 @@ class BlogController < ApplicationController
     end
 
     @title = b[:title]
+    @subtitle = "#{m} #{y}"
+    @spot = 'by ' + b[:author]
     @author = b[:author]
     @month = m
     @year = y

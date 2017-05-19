@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsbasic</title>
+    <title><%= @title || 'railsbasic'%></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
@@ -59,21 +59,20 @@ header { background-image: url('<%= asset_url(User.ran_img) %>'); }
       <hr/>
     <% end %>
 
-    <section id="top">
-        <div class="container">
-            <div class="row">
+    <section id="top" style="padding: 10px 0 20px 0; margin: 0;">
+      <div class="container"> 
+            <div class="row" style="">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                   <h2 class="section-heading"><%= @title %></h2>
-                    <hr class="light">
-<p>
-<%=@subtitle%>
-</p>
+                  <p>
+                  <%=@subtitle%>
+                  </p>
 
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-primary" id="about">
+    <section class="bg-primary" id="about" style="padding: 30px 0 20px 0; margin: 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
