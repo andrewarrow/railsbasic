@@ -41,9 +41,6 @@ header { background-image: url('<%= asset_url(User.ran_img) %>'); }
                     <li>
                       <a href="/users/me/edit">settings</a>
                     </li>
-                    <li>
-                      <%=link_to 'logout', session_path(id: 'me'), method: 'delete' %>
-                    </li>
                   <% end %>
                 </ul>
             </div>
@@ -68,10 +65,14 @@ header { background-image: url('<%= asset_url(User.ran_img) %>'); }
       <div class="container text-center">
         <div class="call-to-action">
           <h2>railsbasic</h2>
-          <a href="/users/new" class="btn btn-default btn-xl sr-button">Sign Up</a>
-          &nbsp;
-          &nbsp;
-          <a href="/sessions/new" class="btn btn-default btn-xl sr-button">Login</a>
+          <% if current_user %>
+            <%=link_to('logout', session_path(id: 'me'), class: 'btn btn-default btn-xl sr-button', method: 'delete') %>
+          <% else %>
+            <a href="/users/new" class="btn btn-default btn-xl sr-button">Sign Up</a>
+            &nbsp;
+            &nbsp;
+            <a href="/sessions/new" class="btn btn-default btn-xl sr-button">Login</a>
+          <% end %>
           <p>
           <br/>
           <br/>
