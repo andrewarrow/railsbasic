@@ -21,7 +21,7 @@ class User < ApplicationRecord
    i=%w{blur.jpg car.jpg cliff.jpg home.jpg house.jpg party.jpg pizza.jpg red_car.jpg table.jpg trees.jpg}
    'party.jpg'
    i[rand(i.size)-1]
-   'sand.jpg'
+   'blue.jpg'
   end
 
 	def self.lorum1
